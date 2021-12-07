@@ -37,3 +37,11 @@ func Ternary(cond bool, pos int, neg int) int {
 	}
 	return neg
 }
+
+func Sum(nums []int) int {
+	sum := 0
+	for _, num := range nums {
+		sum += num
+	}
+	return sum
+}
