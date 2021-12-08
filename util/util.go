@@ -2,6 +2,7 @@ package util
 
 import (
 	"os"
+	"strconv"
 	"strings"
 )
 
@@ -44,4 +45,14 @@ func Sum(nums []int) int {
 		sum += num
 	}
 	return sum
+}
+
+func ParseNumLine(line string) []int {
+	res := []int{}
+	for _, str := range strings.Split(line, ",") {
+		strVal, _ := strconv.Atoi(str)
+		res = append(res, strVal)
+	}
+
+	return res
 }
